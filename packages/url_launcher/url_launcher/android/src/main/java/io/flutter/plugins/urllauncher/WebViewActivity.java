@@ -135,7 +135,7 @@ public class WebViewActivity extends Activity {
     webview.setWebChromeClient(new FlutterWebChromeClient());
 
     // Register receiver that may finish this Activity.
-    registerReceiver(broadcastReceiver, closeIntentFilter);
+    // registerReceiver(broadcastReceiver, closeIntentFilter);
   }
 
   private Map<String, String> extractHeaders(Bundle headersBundle) {
@@ -150,7 +150,7 @@ public class WebViewActivity extends Activity {
   @Override
   protected void onDestroy() {
     super.onDestroy();
-    unregisterReceiver(broadcastReceiver);
+    // unregisterReceiver(broadcastReceiver);
   }
 
   @Override
